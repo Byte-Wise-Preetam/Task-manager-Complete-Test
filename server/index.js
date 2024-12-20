@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 4000;
 
 // CORS configuration with credentials
 const corsOptions = {
-    origin: 'http://localhost:5173', // Allow only this origin
+    origin: ['http://localhost:5173', 'https://task-manager-complete-test.vercel.app'], // Allow only this origin
     credentials: true, 
 };
 
