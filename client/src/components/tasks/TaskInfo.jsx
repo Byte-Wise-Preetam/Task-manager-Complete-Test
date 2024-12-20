@@ -153,10 +153,6 @@ const TaskInfo = () => {
 
     const task = useMemo(() => tasks.find((task) => task._id === taskId), [tasks, taskId]);
 
-    if(!task){
-        window.location.href = "/404";
-    }
-
     const isUserTaskAdmin = useMemo(() => loggedinUser?._id === task?.taskAdmin._id, [loggedinUser, task]);
 
     const [selected, setSelected] = useState(0);
