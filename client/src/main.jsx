@@ -7,9 +7,5 @@ import LogRocket from 'logrocket';
 LogRocket.init('ko7uwn/flowmate');
 
 createRoot(document.getElementById('root')).render(
-
-  <StrictMode>
-    <App />
-  </StrictMode>
-
+  <App />
 )
