@@ -35,15 +35,13 @@ app.get("/", (req, res) => {
     res.send("Hello from Localhost");
 })
 
-if (process.env.NODE_ENV !== 'production'){
-    const startServer = async function(){
-        await connectDB();
+const startServer = async function(){
+    await connectDB();
 
-        app.listen(PORT, function(){
-            console.log(`Server running at http://localhost:${PORT}/`);
-        })
-    }
-
-    startServer();
+    app.listen(PORT, function(){
+        console.log(`Server running at http://localhost:${PORT}/`);
+    })
 }
+
+startServer();
 
